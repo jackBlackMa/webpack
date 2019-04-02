@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --open --config webpack.config.js --hot --devtool source-map"
+    "start": "webpack-dev-server  --open --config webpack.config.js --hot --devtool source-map"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,14 @@
   "homepage": "https://github.com/jackBlackMa/webpack#readme",
   "devDependencies": {
     "@babel/core": "^7.4.0",
+    "@babel/plugin-transform-runtime": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/runtime": "^7.4.2",
+    "babel-loader": "^7.1.2",
+    "css-loader": "^2.1.1",
     "cz-conventional-changelog": "^2.1.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"

@@ -1,7 +1,5 @@
-const show = require('./show.js')
+import show from './show.js';
+import './main.css';
 
 show('webpack');
 
-const show2= '4-2';
-
-const show2= '4-3';
