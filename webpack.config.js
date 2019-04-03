@@ -20,19 +20,35 @@ const config = {
                 //         }
                 //     }
                 // ]
-                loaders:ExtractTextPlugin.extract({
-                    use:['css-loader']
-                })
+                loaders: ExtractTextPlugin.extract({
+                    use: ['css-loader']
+                }),
+                exclude: /node_modules/
             },
             {
                 test: /\.js$/,
                 use: ['babel-loader']
+            }, {
+                test: /\.scss$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            config: {
+                                path: 'postcss.config.js'
+                            }
+                        }
+                    },
+                    'sass-loader'],
+                    exclude: /node_modules/
             }
         ]
     },
     plugins: [
         new ExtractTextPlugin({
-            filename:`[name].css`
+            filename: `[name].css`
         })
     ]
 }
