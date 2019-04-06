@@ -4,9 +4,10 @@
       "useBuiltIns": false,
     }],
     "@babel/preset-react",
-    "es2015"
   ],
   "plugins": [
-    "@babel/plugin-transform-runtime"
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-proposal-class-properties"
+
   ]
 }

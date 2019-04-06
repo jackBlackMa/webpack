@@ -21,16 +21,16 @@ const cssProd = ExtractTextPlugin.extract({
 
 const cssDev = [
     'style-loader',
-    'css-loader',
+    'css-loader?sourceMap',
     {
-        loader: 'postcss-loader',
+        loader: 'postcss-loader?sourceMap',
         options: {
             config: {
                 path: 'postcss.config.js'
             }
         }
     },
-    'sass-loader'];
+    'sass-loader?sourceMap'];
 
 
 const cssConfig = isProd ? cssProd : cssDev;
@@ -172,9 +172,10 @@ const config = {
     devServer: {
         open: true,
         hot: true,
-        // port: 8999,
+        port: 10000,
+        
     },
-    // devtool: 'source-map',
+    devtool: 'source-map',
 }
 
 module.exports = config
