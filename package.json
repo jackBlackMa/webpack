@@ -65,5 +65,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0"
   }
 }
