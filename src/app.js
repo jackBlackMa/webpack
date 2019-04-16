@@ -6,6 +6,7 @@ import Root from './component/Root';
 import Event from './component/绑定原生事件';
 import Event2 from './component/阻止事件冒泡';
 import Select from './component/Select';
+import fetch from 'es6-promise'
 
 
 
@@ -54,6 +55,12 @@ class LoginPage extends Component {
         super(props)
 
     }
+
+    componentDidMount(){
+        var result = fetch('/api/1', { credentials: 'include', headers: { 'Accept': 'application/json, text/plain, */*' } });
+        result.then(res => { return res.text() }).then(text => { console.log(text) })
+    }
+
 
     render() {
         console.log(this.props)
